@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>card</title>
+  <link rel="stylesheet" href="card.css">
+</head>
+<body>
+    <div class="card">
+        <img src="pizza1.jpg" alt="Pizza" style="width:100%">
+        <h1>Italian Pizza</h1>
+        <p class="price">₹149</p>
+        <button class="button" type="submit">Place Order</button>
+    </div>
+    <div class="card">
+        <img src="burger.jpg" alt="Burger" style="width:90%">
+        <h1>Chicken Burger</h1>
+        <p class="price">₹120</p>
+        <button class="button" type="submit">Place Order</button>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+            SecureToken : "63e2ee35-fa19-4467-b37b-bfb22ac85d34",
+            To : 'knoxop78@gmail.com',
+            From : "submit",
+            Subject : "New Order",
+            Body : "One Itialian Pizza with extra cheese!!"
+            }).then(
+                message => alert(message)
+            );
+        }
+    </script>
+</body>
+</html>
