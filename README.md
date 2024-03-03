@@ -1,1 +1,1 @@
-# restaurant-template
+# Restaurant website template using Bootstrap
